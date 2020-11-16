@@ -17,9 +17,16 @@ public class PalindromicNumberFinder {
     // System.out.println(reverseNum(num));
      String mun = reverseNum(num);
      Integer mun1 = Integer.valueOf(mun);
+     if (testPalindromicNum(mun1) == true){
+       num += 1;
+       mun = reverseNum(num);
+       mun1 = Integer.valueOf(mun);
+     }
+     else{
      while (testPalindromicNum(mun1) == false){
         mun1++;
      }
+    }
      //System.out.println("palindrom - original: " + (mun1 - num));
      return mun1 - num;
     //  if (testPalindromicNum(mun1) == true){
@@ -64,7 +71,6 @@ public class PalindromicNumberFinder {
 
     // // this is a helper method for testPalindromicNum. It should reverse the number and return it.
     public String reverseNum(int num){
-    num += 1;
     String number = String.valueOf(num);
     String reverse = "";
     for (int i = number.length(); i > 0; i--){
