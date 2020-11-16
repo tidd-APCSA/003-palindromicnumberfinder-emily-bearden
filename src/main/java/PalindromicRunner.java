@@ -4,7 +4,7 @@ public class PalindromicRunner {
       //int num1 = 123;
       Integer num2 = 72927;
       PalindromicNumberFinder test = new PalindromicNumberFinder(num2);
-      System.out.println("reverse: " + test.reverseNum(num2));
+     // System.out.println("reverse: " + test.reverseNum(num2));
       //System.out.println("number is " + test.getNum());
       test.searchForPalindromicNum(num2);
       System.out.println(test);

@@ -4,7 +4,7 @@ public class PalindromicNumberFinder {
     // constructor
     public PalindromicNumberFinder(int num){
         this.num = num;
-        num += 1;
+       // num += 1;
     }
 
     // accessor/getter method
@@ -15,18 +15,25 @@ public class PalindromicNumberFinder {
     // this method should find the next palindromic number
     public int searchForPalindromicNum(int num){
     // System.out.println(reverseNum(num));
+     num+= 1;
      String mun = reverseNum(num);
      Integer mun1 = Integer.valueOf(mun);
+    // int i = 0;
      if (testPalindromicNum(mun1) == true){
-       num += 1;
        mun = reverseNum(num);
        mun1 = Integer.valueOf(mun);
+       //System.out.println("next palindrome: " + mun1);
+       //System.out.println("i: " + i);
      }
      else{
      while (testPalindromicNum(mun1) == false){
         mun1++;
+        //i++;
+        //System.out.println("i: " + i);
      }
     }
+    //System.out.println("mun1: " + mun1);
+   // System.out.println("i: " + i);
      //System.out.println("palindrom - original: " + (mun1 - num));
      return mun1 - num;
     //  if (testPalindromicNum(mun1) == true){
@@ -71,6 +78,7 @@ public class PalindromicNumberFinder {
 
     // // this is a helper method for testPalindromicNum. It should reverse the number and return it.
     public String reverseNum(int num){
+     // num += 1;
     String number = String.valueOf(num);
     String reverse = "";
     for (int i = number.length(); i > 0; i--){
