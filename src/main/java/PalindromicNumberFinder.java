@@ -14,13 +14,14 @@ public class PalindromicNumberFinder {
 
     // this method should find the next palindromic number and return the difference
     public int searchForPalindromicNum(int num){
+      // all fixed up Emily! 👏
       num++;
-      int odometer = num;
+     // System.out.println("num: " + num);
       while(!testPalindromicNum(num)){
-        odometer++;
+        num++;
       }
 
-      return odometer - num;
+      return num - getNum();
       
 
 
@@ -63,6 +64,7 @@ public class PalindromicNumberFinder {
       //num++;
 
       String reversed = reverseNum(num);
+     // System.out.println("reversed: " + reversed);
 
       String number = String.valueOf(num);
 
